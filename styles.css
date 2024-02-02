@@ -1,43 +1,81 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7; /* Light gray */
+    background: linear-gradient(90deg, #ff69b4, #333); /* Dark and Summer Raspberry gradient for the homepage */
     margin: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
 .card {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: center;
-    max-width: 600px;
+    background: linear-gradient(90deg, #ff69b4, #333); /* Dark and Summer Raspberry gradient for the card background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff; /* White text color */
 }
 
-h1 {
-    color: #ff5370; /* Pinkish red */
+.hover-effect:hover {
+    transform: translateY(-5px); /* Bumping effect on hover */
 }
 
 button {
-    background-color: #ff5370;
-    color: #fff;
-    border: none;
+    background-color: #ff69b4; /* Deep Pink color for the button */
+    color: #fff; /* White text color */
     padding: 10px 20px;
-    font-size: 16px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
     margin-top: 20px;
 }
 
 button:hover {
-    background-color: #d64972; /* Lighter pink */
+    background-color: #ff4f93; /* Slightly darker shade on hover */
 }
 
-p {
-    color: #333;
-    line-height: 1.6;
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay color */
+    z-index: 1;
 }
 
-/* Add any additional styles or tweaks to suit your preferences */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333; /* Darker background color for the modal */
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff; /* White text color */
+    z-index: 2;
+    text-align: center;
+}
+
+.modal p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.modal button {
+    background-color: #ff69b4; /* Deep Pink color for the modal button */
+    color: #fff; /* White text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal button:hover {
+    background-color: #ff4f93; /* Slightly darker shade on hover */
+}

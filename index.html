@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.1.0/dist/canvas-confetti.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Happy Birthday, Amelia!</title>
 </head>
 <body>
-    <div class="card">
-        <h1>Happy Birthday, Amelia!</h1>
-        <p>Dear Amelia,</p>
-        <p>Wishing you a day filled with joy, love, and wonderful surprises. You are truly special, and your presence lights up our lives.</p>
-        <button onclick="unleashConfetti()">Click for Confetti</button>
-        <p>May this year bring you happiness, success, and all the amazing things you deserve. Cheers to another year of fantastic memories!</p>
-        <p>With lots of love,<br>Your Name</p>
+    <div class="card" id="mainCard">
+        <h1 class="hover-effect">HAPPY BIRTHDAY BABY GIRL</h1>
+        <button onclick="showLoveWords()">Click Here</button>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="modal">
+        <p>❤️❤️❤️❤️❤️❤️ You are the most incredible person I've ever met, and today is all about celebrating you. On your special day, I want to express my deepest love and gratitude for having you in my life. Your presence brings joy, warmth, and endless happiness. We've known each other since we were basically kids, and it's been amazing to learn and grow together. This marks another year you're alive to spend with me 😂😂, and I couldn't be happier. ❤️❤️❤️❤️❤️❤️</p>
+        <p>HAPPY BIRTHDAY, MY LOVE! 🎉🎂❤️❤️❤️</p>
+        <p>May your day be filled with laughter and happiness. As you embark on another year, may every moment be a step towards achieving your dreams and creating beautiful memories together. I can't wait to spend forever with you. I LOVE YOU! ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️</p>
+        <button onclick="closeModal()">Close</button>
     </div>
 
     <script src="script.js"></script>
