@@ -1,23 +1,23 @@
 body {
     margin: 0;
-    font-family: 'Dancing Script', cursive; /* Use Dancing Script as the primary font, fallback to generic cursive */
-    background: linear-gradient(90deg, #4a4a4a, #800080, #4a4a4a); /* Gradient background */
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(90deg, #4a4a4a, #800080, #4a4a4a);
     background-size: 200% 100%;
     animation: gradient 5s infinite;
-    color: #ffffff; /* White text color */
+    color: #ffffff;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark grey container background */
+    background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 header {
     text-align: center;
-    color: #ff66b2; /* Pink text color */
+    color: #ff66b2;
 }
 
 .intro, .birthday-wishes, .gift {
@@ -29,19 +29,17 @@ main {
 }
 
 h1 {
-    font-size: 3em; /* Default font size for "HAPPY BIRTHDAY MY LOVE" */
-    transition: transform 0.3s ease-in-out, color 1s ease-in-out; /* Smooth color and transform transition effect */
-    animation: colorChange 5s infinite; /* Color changing animation */
+    font-size: 3em;
+    transition: transform 0.3s ease-in-out, color 5s ease-in-out; /* Adjusted color change duration */
+    animation: pulsate 2s infinite, colorChange 20s infinite; /* Adjusted color change duration */
 }
 
 h1:hover {
-    color: #000000; /* Change text color on hover to black */
+    color: #000000;
 }
 
-.intro p,
-.birthday-wishes p,
-.gift p {
-    font-size: 1.3em; /* Default font size for paragraphs */
+.intro p, .birthday-wishes p, .gift p {
+    font-size: 1.3em;
 }
 
 @keyframes gradient {
@@ -58,13 +56,31 @@ h1:hover {
 
 @keyframes colorChange {
     0% {
-        color: #ff66b2; /* Current color */
+        color: #ff66b2;
+    }
+    25% {
+        color: #808080; /* Grey */
     }
     50% {
-        color: #404040; /* Dark grey */
+        color: #ffffff; /* White */
+    }
+    75% {
+        color: #c0c0c0; /* Lighter Grey */
     }
     100% {
-        color: #000000; /* Black */
+        color: #ff66b2;
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
